@@ -54,7 +54,7 @@ fn main() {
     sc.new_line();
     let a:i64 =sc.get();
     let b:i64 =sc.get();
-    for i in 0..a {
+    for i in 0..=a {
         if 2 * i + 4 * (a-i) == b {
             println!("Yes");
             return 
