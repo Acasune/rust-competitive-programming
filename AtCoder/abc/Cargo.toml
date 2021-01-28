@@ -8,6 +8,7 @@ edition = "2018"
 ##  abc170  ##
 ##############
 
+
 [[bin]]
 name = "abc170-a"
 path = "abc170/a.rs"
@@ -23,6 +24,7 @@ path = "abc170/c.rs"
 [[bin]]
 name = "abc170-d"
 path = "abc170/d.rs"
+
 
 ##############
 ##  abc171  ##
@@ -43,3 +45,24 @@ path = "abc171/c.rs"
 [[bin]]
 name = "abc171-d"
 path = "abc171/d.rs"
+
+
+##############
+##  abc172  ##
+##############
+
+[[bin]]
+name = "abc172-a"
+path = "abc172/a.rs"
+
+[[bin]]
+name = "abc172-b"
+path = "abc172/b.rs"
+
+[[bin]]
+name = "abc172-c"
+path = "abc172/c.rs"
+
+[[bin]]
+name = "abc172-d"
+path = "abc172/d.rs"
