@@ -4,18 +4,42 @@ version = "0.1.0"
 authors = ["Acasune <tttt4aaaa@gmail.com>"]
 edition = "2018"
 
+##############
+##  abc170  ##
+##############
+
 [[bin]]
 name = "abc170-a"
-path = "abc170/abc170-a.rs"
+path = "abc170/a.rs"
 
 [[bin]]
 name = "abc170-b"
-path = "abc170/abc170-b.rs"
+path = "abc170/b.rs"
 
 [[bin]]
 name = "abc170-c"
-path = "abc170/abc170-c.rs"
+path = "abc170/c.rs"
 
 [[bin]]
 name = "abc170-d"
-path = "abc170/abc170-d.rs"
+path = "abc170/d.rs"
+
+##############
+##  abc171  ##
+##############
+
+[[bin]]
+name = "abc171-a"
+path = "abc171/a.rs"
+
+[[bin]]
+name = "abc170-b"
+path = "abc170/b.rs"
+
+[[bin]]
+name = "abc170-c"
+path = "abc170/c.rs"
+
+[[bin]]
+name = "abc170-d"
+path = "abc170/d.rs"
