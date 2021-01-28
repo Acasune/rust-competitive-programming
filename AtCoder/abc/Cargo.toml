@@ -33,13 +33,13 @@ name = "abc171-a"
 path = "abc171/a.rs"
 
 [[bin]]
-name = "abc170-b"
-path = "abc170/b.rs"
+name = "abc171-b"
+path = "abc171/b.rs"
 
 [[bin]]
-name = "abc170-c"
-path = "abc170/c.rs"
+name = "abc171-c"
+path = "abc171/c.rs"
 
 [[bin]]
-name = "abc170-d"
-path = "abc170/d.rs"
+name = "abc171-d"
+path = "abc171/d.rs"
