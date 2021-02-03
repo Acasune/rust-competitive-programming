@@ -47,7 +47,6 @@ impl<R: BufRead> Scanner<R> {
 }
 
 fn main() {
-
     let cin = stdin();
     let cin = cin.lock();
     let mut sc = Scanner::new(cin);
