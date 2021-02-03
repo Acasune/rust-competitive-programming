@@ -315,3 +315,24 @@ path = "abc183/d.rs"
 [[bin]]
 name = "abc183-e"
 path = "abc183/e.rs"
+
+
+##############
+##  abc184  ##
+##############
+
+[[bin]]
+name = "abc184-a"
+path = "abc184/a.rs"
+
+[[bin]]
+name = "abc184-b"
+path = "abc184/b.rs"
+
+[[bin]]
+name = "abc184-c"
+path = "abc184/c.rs"
+
+[[bin]]
+name = "abc184-d"
+path = "abc184/d.rs"
