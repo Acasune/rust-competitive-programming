@@ -16,3 +16,7 @@ path = "selections-for-intermediate-contestants/05-binary-search/08-ALDS1-4-B.rs
 [[bin]]
 name = "09-joi2009ho_b"
 path = "selections-for-intermediate-contestants/05-binary-search/09-joi2009ho_b.rs"
+
+[[bin]]
+name = "10-abc007"
+path = "selections-for-intermediate-contestants/05-binary-search/10-abc007.rs"
