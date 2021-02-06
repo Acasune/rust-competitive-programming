@@ -58,20 +58,18 @@ fn main() {
     let mut sc = Scanner::new(cin);
 
     sc.new_line();
-    let mut n = sc.get::<i64>();
-    let mut x = sc.get::<i64>();
+    let mut v = sc.get::<i64>();
+    let mut t = sc.get::<i64>();
+    let mut s = sc.get::<i64>();
+    let mut d = sc.get::<i64>();
 
-    sc.new_line();
-    let mut v = sc.get_as_vec::<i64>();
-
-    let v: Vec<i64> = v.iter().filter(|&a| a != &x).cloned().collect();
-
-    for i in 0..v.len() {
-        if i == 0 {
-            print!("{}", v[i]);
+    let mut ans = {
+        if v * t <= d && d <= v * s {
+            "No"
         } else {
-            print!(" {}", v[i]);
+            "Yes"
         }
-    }
-    println!("");
+    };
+
+    println!("{}", ans);
 }
