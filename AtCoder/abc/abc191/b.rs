@@ -58,9 +58,20 @@ fn main() {
     let mut sc = Scanner::new(cin);
 
     sc.new_line();
-    let mut a = sc.get::<i64>();
+    let mut n = sc.get::<i64>();
+    let mut x = sc.get::<i64>();
 
-    let mut ans = 0;
+    sc.new_line();
+    let mut v = sc.get_as_vec::<i64>();
 
-    println!("{}", ans);
+    let v: Vec<i64> = v.iter().filter(|&a| a != &x).cloned().collect();
+
+    for i in 0..v.len() {
+        if i == 0 {
+            print!("{}", v[i]);
+        } else {
+            print!(" {}", v[i]);
+        }
+    }
+    println!("");
 }
