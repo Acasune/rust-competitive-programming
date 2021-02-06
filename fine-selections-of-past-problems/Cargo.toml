@@ -1,0 +1,14 @@
+[package]
+name = "abc170"
+version = "0.1.0"
+authors = ["Acasune <tttt4aaaa@gmail.com>"]
+edition = "2018"
+
+
+########################
+##  05_binary-search  ##
+########################
+
+[[bin]]
+name = "08-ALDS1-4-B"
+path = "selections-for-intermediate-contestants/05-binary-search/08-ALDS1-4-B.rs"
