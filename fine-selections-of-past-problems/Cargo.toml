@@ -65,3 +65,7 @@ path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/39-joi201
 [[bin]]
 name = "40-joi2012yo-d"
 path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/40-joi2012yo-d.rs"
+
+[[bin]]
+name = "41-joi2013yo-d"
+path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/41-joi2013yo-d.rs"
