@@ -53,3 +53,7 @@ path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/36-DPL-1-
 [[bin]]
 name = "37-DPL-1-A"
 path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/37-DPL-1-A.rs"
+
+[[bin]]
+name = "38-ALDS1-10-C"
+path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/38-ALDS1-10-C.rs"
