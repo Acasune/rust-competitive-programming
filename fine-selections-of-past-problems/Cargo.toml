@@ -10,21 +10,21 @@ edition = "2018"
 ########################
 
 [[bin]]
-name = "08-ALDS1-4-B"
-path = "selections-for-intermediate-contestants/05-binary-search/08-ALDS1-4-B.rs"
+name = "18-ALDS1-4-B"
+path = "selections-for-intermediate-contestants/05-binary-search/18-ALDS1-4-B.rs"
 
 [[bin]]
-name = "09-joi2009ho_b"
-path = "selections-for-intermediate-contestants/05-binary-search/09-joi2009ho_b.rs"
+name = "19-joi2009ho_b"
+path = "selections-for-intermediate-contestants/05-binary-search/19-joi2009ho_b.rs"
 
 [[bin]]
-name = "10-abc007"
-path = "selections-for-intermediate-contestants/05-binary-search/10-abc007.rs"
+name = "20-abc007"
+path = "selections-for-intermediate-contestants/05-binary-search/20-abc077-c.rs"
 
 [[bin]]
-name = "11-abc023-d"
-path = "selections-for-intermediate-contestants/05-binary-search/11-abc023-d.rs"
+name = "21-abc023-d"
+path = "selections-for-intermediate-contestants/05-binary-search/21-abc023-d.rs"
 
 [[bin]]
-name = "12-arc054_b"
-path = "selections-for-intermediate-contestants/05-binary-search/12-arc054_b.rs"
+name = "22-arc054_b"
+path = "selections-for-intermediate-contestants/05-binary-search/22-arc054_b.rs"
