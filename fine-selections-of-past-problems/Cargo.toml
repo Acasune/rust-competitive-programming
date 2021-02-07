@@ -41,3 +41,7 @@ path = "selections-for-intermediate-contestants/05-binary-search/23-joi2008ho_c.
 [[bin]]
 name = "34-ALDS1-10-A"
 path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/34-ALDS1-10-A.rs"
+
+[[bin]]
+name = "35-DPL-1-B"
+path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/35-DPL-1-B.rs"
