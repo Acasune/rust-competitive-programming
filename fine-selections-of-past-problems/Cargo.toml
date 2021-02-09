@@ -81,3 +81,7 @@ path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/43-pakenc
 [[bin]]
 name = "44-aoj-1167"
 path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/44-aoj-1167.rs"
+
+[[bin]]
+name = "45-aoj-2199"
+path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/45-aoj-2199.rs"
