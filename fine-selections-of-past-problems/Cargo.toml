@@ -77,3 +77,7 @@ path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/42-joi201
 [[bin]]
 name = "43-pakencamp-2019-day3-d"
 path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/43-pakencamp-2019-day3-d.rs"
+
+[[bin]]
+name = "44-aoj-1167"
+path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/44-aoj-1167.rs"
