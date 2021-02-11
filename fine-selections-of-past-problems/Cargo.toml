@@ -94,3 +94,7 @@ path = "selections-for-intermediate-contestants/08-dp-knapsack-problem/45-aoj-21
 [[bin]]
 name = "46-ALDS1-10-B"
 path = "selections-for-intermediate-contestants/09-dp-interval-dp/46-ALDS1-10-B.rs"
+
+[[bin]]
+name = "47-joi2015ho-b"
+path = "selections-for-intermediate-contestants/09-dp-interval-dp/47-joi2015ho-b.rs"
