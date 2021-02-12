@@ -126,3 +126,7 @@ path = "selections-for-intermediate-contestants/11-dp-others/55-abc134-e.rs"
 [[bin]]
 name = "68-NTL-1-A"
 path = "selections-for-intermediate-contestants/15-fast-primality-testing/68-NTL-1-A.rs"
+
+[[bin]]
+name = "69-abc084-d"
+path = "selections-for-intermediate-contestants/15-fast-primality-testing/69-abc084-d.rs"
