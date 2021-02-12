@@ -154,3 +154,7 @@ path = "selections-for-intermediate-contestants/17-multiplicative-inverse/72-abc
 [[bin]]
 name = "73-abc145-d"
 path = "selections-for-intermediate-contestants/17-multiplicative-inverse/73-abc145-d.rs"
+
+[[bin]]
+name = "74-abc021-d"
+path = "selections-for-intermediate-contestants/17-multiplicative-inverse/74-abc021-d.rs"
