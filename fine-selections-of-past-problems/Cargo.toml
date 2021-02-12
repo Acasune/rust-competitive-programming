@@ -170,3 +170,7 @@ path = "selections-for-intermediate-contestants/18-culminative-sum/76-nikkei2019
 [[bin]]
 name = "77-joi2010ho-a"
 path = "selections-for-intermediate-contestants/18-culminative-sum/77-joi2010ho-a.rs"
+
+[[bin]]
+name = "78-joi2011ho1"
+path = "selections-for-intermediate-contestants/18-culminative-sum/78-joi2011ho1.rs"
