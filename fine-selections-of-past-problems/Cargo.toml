@@ -138,3 +138,7 @@ path = "selections-for-intermediate-contestants/15-fast-primality-testing/69-abc
 [[bin]]
 name = "70-NTL-1-B"
 path = "selections-for-intermediate-contestants/16-fast-modpow-calculation/70-NTL-1-B.rs"
+
+[[bin]]
+name = "71-s8pc-1-e"
+path = "selections-for-intermediate-contestants/16-fast-modpow-calculation/71-s8pc-1-e.rs"
