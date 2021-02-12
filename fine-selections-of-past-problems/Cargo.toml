@@ -150,3 +150,7 @@ path = "selections-for-intermediate-contestants/16-fast-modpow-calculation/71-s8
 [[bin]]
 name = "72-abc034-c"
 path = "selections-for-intermediate-contestants/17-multiplicative-inverse/72-abc034-c.rs"
+
+[[bin]]
+name = "73-abc145-d"
+path = "selections-for-intermediate-contestants/17-multiplicative-inverse/73-abc145-d.rs"
