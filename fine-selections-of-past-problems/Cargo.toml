@@ -166,3 +166,7 @@ path = "selections-for-intermediate-contestants/17-multiplicative-inverse/74-abc
 [[bin]]
 name = "76-abc034-c"
 path = "selections-for-intermediate-contestants/18-culminative-sum/76-nikkei2019-final-a.rs"
+
+[[bin]]
+name = "77-joi2010ho-a"
+path = "selections-for-intermediate-contestants/18-culminative-sum/77-joi2010ho-a.rs"
