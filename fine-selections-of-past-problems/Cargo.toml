@@ -142,3 +142,11 @@ path = "selections-for-intermediate-contestants/16-fast-modpow-calculation/70-NT
 [[bin]]
 name = "71-s8pc-1-e"
 path = "selections-for-intermediate-contestants/16-fast-modpow-calculation/71-s8pc-1-e.rs"
+
+################################
+##  17-multiplicative-inverse ##
+################################
+
+[[bin]]
+name = "72-abc034-c"
+path = "selections-for-intermediate-contestants/17-multiplicative-inverse/72-abc034-c.rs"
