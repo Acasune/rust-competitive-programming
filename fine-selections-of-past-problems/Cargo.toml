@@ -190,3 +190,7 @@ path = "selections-for-intermediate-contestants/18-culminative-sum/81-abc014-3.r
 [[bin]]
 name = "82-aoj-1611"
 path = "selections-for-intermediate-contestants/18-culminative-sum/82-aoj-1611.rs"
+
+[[bin]]
+name = "83-joi2015ho-a"
+path = "selections-for-intermediate-contestants/18-culminative-sum/83-joi2015ho-a.rs"
