@@ -214,3 +214,11 @@ path = "selections-for-intermediate-contestants/19-union-find/86-abc075-c.rs"
 [[bin]]
 name = "87-abc120-d"
 path = "selections-for-intermediate-contestants/19-union-find/87-abc120-d.rs"
+
+################################
+##  22-mathematical-problems  ##
+################################
+
+[[bin]]
+name = "95-abc149-b"
+path = "selections-for-intermediate-contestants/22-mathematical-problems/95-abc149-b.rs"
