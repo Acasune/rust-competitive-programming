@@ -226,3 +226,7 @@ path = "selections-for-intermediate-contestants/22-mathematical-problems/95-abc1
 [[bin]]
 name = "96-abc139-d"
 path = "selections-for-intermediate-contestants/22-mathematical-problems/96-abc139-d.rs"
+
+[[bin]]
+name = "97-abc150-d"
+path = "selections-for-intermediate-contestants/22-mathematical-problems/97-abc150-d.rs"
