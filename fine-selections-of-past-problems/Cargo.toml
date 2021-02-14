@@ -223,6 +223,10 @@ path = "selections-for-intermediate-contestants/19-union-find/87-abc120-d.rs"
 name = "88-joi2008ho-a"
 path = "selections-for-intermediate-contestants/20-other-techniques/88-joi2008ho-a.rs"
 
+[[bin]]
+name = "89-joi2013ho1"
+path = "selections-for-intermediate-contestants/20-other-techniques/89-joi2013ho1.rs"
+
 
 ################################
 ##  22-mathematical-problems  ##
