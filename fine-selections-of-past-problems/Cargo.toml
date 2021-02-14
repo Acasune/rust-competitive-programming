@@ -238,3 +238,7 @@ path = "selections-for-intermediate-contestants/22-mathematical-problems/98-sumi
 [[bin]]
 name = "99-ddcc2020-qual-d"
 path = "selections-for-intermediate-contestants/22-mathematical-problems/99-ddcc2020-qual-d.rs"
+
+[[bin]]
+name = "100-tenka1-2018-d"
+path = "selections-for-intermediate-contestants/22-mathematical-problems/100-tenka1-2018-d.rs"
