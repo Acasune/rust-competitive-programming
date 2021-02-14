@@ -234,3 +234,7 @@ path = "selections-for-intermediate-contestants/22-mathematical-problems/97-abc1
 [[bin]]
 name = "98-sumitb2019-e"
 path = "selections-for-intermediate-contestants/22-mathematical-problems/98-sumitb2019-e.rs"
+
+[[bin]]
+name = "99-ddcc2020-qual-d"
+path = "selections-for-intermediate-contestants/22-mathematical-problems/99-ddcc2020-qual-d.rs"
