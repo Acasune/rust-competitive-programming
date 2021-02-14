@@ -231,6 +231,9 @@ path = "selections-for-intermediate-contestants/20-other-techniques/89-joi2013ho
 name = "90-s8pc-5-b"
 path = "selections-for-intermediate-contestants/20-other-techniques/90-s8pc-5-b.rs"
 
+[[bin]]
+name = "91-abc144-d"
+path = "selections-for-intermediate-contestants/20-other-techniques/91-abc144-d.rs"
 
 ################################
 ##  22-mathematical-problems  ##
