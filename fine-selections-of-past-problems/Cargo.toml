@@ -120,6 +120,15 @@ name = "55-abc134-e"
 path = "selections-for-intermediate-contestants/11-dp-others/55-abc134-e.rs"
 
 #################################
+##  12-shortest-path-dijkstra  ##
+#################################
+
+[[bin]]
+name = "56-GRL-1-A"
+path = "selections-for-intermediate-contestants/12-shortest-path-dijkstra/56-GRL-1-A.rs"
+
+
+#################################
 ##  15-fast-primality-testing  ##
 #################################
 
