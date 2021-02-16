@@ -1,5 +1,5 @@
 ﻿use std::{
-    cmp::{max, min, Reverse},
+    cmp::{max, min, Ordering, Reverse},
     collections::{BinaryHeap, HashSet},
     fmt::Binary,
     io::*,
@@ -52,6 +52,29 @@ impl<R: BufRead> Scanner<R> {
     }
 }
 
+#[derive(Copy, Clone, Eq, PartialEq)]
+struct Edge {
+    to: usize,
+    dist: i64,
+}
+
+impl Ord for Edge {
+    fn cmp(&self, other: &Edge) -> Ordering {
+        if self.dist > other.dist {
+            Ordering::Greater
+        } else if self.dist < other.dist {
+            Ordering::Less
+        } else {
+            Ordering::Equal
+        }
+    }
+}
+impl PartialOrd for Edge {
+    fn partial_cmp(&self, other: &Edge) -> Option<Ordering> {
+        Some(self.cmp(&other))
+    }
+}
+
 fn main() {
     let cin = stdin();
     let cin = cin.lock();
@@ -61,28 +84,34 @@ fn main() {
     let mut g = sc.get_as_vec::<usize>();
     let inf = 1_000_000_010;
     let mut d = vec![inf; g[0]];
-    let mut costs = vec![Vec::new(); g[0]];
+    let mut edges = vec![Vec::new(); g[0]];
 
     for _ in 0..g[1] {
         sc.new_line();
         let mut a = sc.get_as_vec::<usize>();
-        costs[a[0]].push(vec![a[2], a[1]]);
+        edges[a[0]].push(Edge {
+            to: a[1],
+            dist: a[2] as i64,
+        });
     }
     d[g[2]] = 0;
 
-    let mut heap: BinaryHeap<Reverse<Vec<usize>>> = BinaryHeap::new();
-    heap.push(Reverse(vec![0, g[2]]));
+    let mut heap: BinaryHeap<Reverse<Edge>> = BinaryHeap::new();
+    heap.push(Reverse(Edge { to: g[2], dist: 0 }));
 
-    while &heap.len() > &0 {
-        let mut c = heap.pop().unwrap().0;
-        let t = c[1];
-        if (d[t] < c[0]) {
+    while !&heap.is_empty() {
+        let Edge { to, dist } = heap.pop().unwrap().0;
+        let t = to as usize;
+        if d[to] < dist {
             continue;
         }
-        for n in &costs[t] {
-            if d[n[1]] > d[t] + n[0] {
-                d[n[1]] = d[t] + n[0];
-                heap.push(Reverse(vec![d[n[1]], n[1]]));
+        for n in &edges[t] {
+            if d[n.to] > d[to] + n.dist {
+                d[n.to] = d[to] + n.dist;
+                heap.push(Reverse(Edge {
+                    to: n.to,
+                    dist: n.dist,
+                }));
             }
         }
     }
