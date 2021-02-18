@@ -147,6 +147,10 @@ path = "selections-for-intermediate-contestants/12-shortest-path-dijkstra/59-joi
 name = "60-GRL-1-C"
 path = "selections-for-intermediate-contestants/13-shortest-path-warshall–floyd/60-GRL-1-C.rs"
 
+[[bin]]
+name = "61-abc012-4"
+path = "selections-for-intermediate-contestants/13-shortest-path-warshall–floyd/61-abc012-4.rs"
+
 #################################
 ##  15-fast-primality-testing  ##
 #################################
