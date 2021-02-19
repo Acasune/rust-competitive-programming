@@ -155,6 +155,11 @@ path = "selections-for-intermediate-contestants/13-shortest-path-warshall–floy
 name = "62-abc079-d"
 path = "selections-for-intermediate-contestants/13-shortest-path-warshall–floyd/62-abc079-d.rs"
 
+[[bin]]
+name = "63-arc083-b"
+path = "selections-for-intermediate-contestants/13-shortest-path-warshall–floyd/63-arc083-b.rs"
+
+
 #################################
 ##  15-fast-primality-testing  ##
 #################################
