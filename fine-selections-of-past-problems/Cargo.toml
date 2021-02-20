@@ -175,6 +175,10 @@ path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/65-jois
 name = "66-aoj-1127"
 path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/66-aoj-1127.rs"
 
+[[bin]]
+name = "67-arc076-b"
+path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/67-arc076-b.rs"
+
 #################################
 ##  15-fast-primality-testing  ##
 #################################
