@@ -159,6 +159,14 @@ path = "selections-for-intermediate-contestants/13-shortest-path-warshall–floy
 name = "63-arc083-b"
 path = "selections-for-intermediate-contestants/13-shortest-path-warshall–floyd/63-arc083-b.rs"
 
+###############################
+## 14-minimal-spanning-tree  ##
+###############################
+
+[[bin]]
+name = "64-GRL-1-C"
+path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/64-GRL-1-C.rs"
+
 
 #################################
 ##  15-fast-primality-testing  ##
