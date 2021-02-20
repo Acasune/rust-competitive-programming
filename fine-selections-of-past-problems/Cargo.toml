@@ -167,6 +167,9 @@ path = "selections-for-intermediate-contestants/13-shortest-path-warshall–floy
 name = "64-GRL-1-C"
 path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/64-GRL-1-C.rs"
 
+[[bin]]
+name = "65-joisc2010-finals"
+path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/65-joisc2010-finals.rs"
 
 #################################
 ##  15-fast-primality-testing  ##
