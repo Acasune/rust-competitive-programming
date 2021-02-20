@@ -171,6 +171,10 @@ path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/64-GRL-
 name = "65-joisc2010-finals"
 path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/65-joisc2010-finals.rs"
 
+[[bin]]
+name = "66-aoj-1127"
+path = "selections-for-intermediate-contestants/14-minimal-spanning-tree/66-aoj-1127.rs"
+
 #################################
 ##  15-fast-primality-testing  ##
 #################################
