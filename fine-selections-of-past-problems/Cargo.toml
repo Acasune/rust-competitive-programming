@@ -111,6 +111,10 @@ path = "selections-for-intermediate-contestants/09-dp-interval-dp/48-aoj-1611.rs
 name = "49-DPL-2-A"
 path = "selections-for-intermediate-contestants/10-dp-bit-dp/49-DPL-2-A.rs"
 
+[[bin]]
+name = "50-s8pc-1-g"
+path = "selections-for-intermediate-contestants/10-dp-bit-dp/50-s8pc-1-g.rs"
+
 ####################
 ##  11-dp-others  ##
 ####################
