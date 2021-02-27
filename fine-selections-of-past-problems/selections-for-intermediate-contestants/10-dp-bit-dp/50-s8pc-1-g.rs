@@ -72,12 +72,15 @@ fn main() {
     dp[0][0][0] = 0; // shortest dist
     dp[0][0][1] = 1; // number of paths
 
+
     for s in 1..(1 << v) {
         // to
         for i in 0..v {
             if s & (1 << i) != 0 {
                 // from
-                for j in 0..v {
+            // from
+            if s & (1 << i) != 0 {
+          for j in 0..v {
                     if dp[s - (1 << i)][j][0] + edges[j][i][0] > edges[j][i][1] {
                         continue;
                     }

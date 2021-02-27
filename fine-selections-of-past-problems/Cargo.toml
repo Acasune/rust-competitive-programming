@@ -134,6 +134,7 @@ path = "selections-for-intermediate-contestants/10-dp-bit-dp/49-DPL-2-A.rs"
 name = "50-s8pc-1-g"
 path = "selections-for-intermediate-contestants/10-dp-bit-dp/50-s8pc-1-g.rs"
 
+<<<<<<< HEAD
 [[bin]]
 name = "51-joi2014yo-d"
 path = "selections-for-intermediate-contestants/10-dp-bit-dp/51-joi2014yo-d.rs"
