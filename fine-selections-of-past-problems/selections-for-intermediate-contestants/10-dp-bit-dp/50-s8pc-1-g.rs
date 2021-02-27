@@ -77,10 +77,9 @@ fn main() {
         // to
         for i in 0..v {
             if s & (1 << i) != 0 {
-                // from
             // from
             if s & (1 << i) != 0 {
-          for j in 0..v {
+            for j in 0..v {
                     if dp[s - (1 << i)][j][0] + edges[j][i][0] > edges[j][i][1] {
                         continue;
                     }
