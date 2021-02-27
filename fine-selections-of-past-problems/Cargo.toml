@@ -45,6 +45,10 @@ path = "selections-for-intermediate-contestants/06-dfs/24-ALDS1-11-B.rs"
 name = "25-aoj-1160"
 path = "selections-for-intermediate-contestants/06-dfs/25-aoj-1160.rs"
 
+[[bin]]
+name = "26-abc138-d"
+path = "selections-for-intermediate-contestants/06-dfs/26-abc138-d.rs"
+
 ##############################
 ##  08_dp-knapsack-problem  ##
 ##############################
