@@ -119,6 +119,10 @@ path = "selections-for-intermediate-contestants/10-dp-bit-dp/50-s8pc-1-g.rs"
 name = "51-joi2014yo-d"
 path = "selections-for-intermediate-contestants/10-dp-bit-dp/51-joi2014yo-d.rs"
 
+[[bin]]
+name = "52-joi2017yo-d"
+path = "selections-for-intermediate-contestants/10-dp-bit-dp/52-joi2017yo-d.rs"
+
 ####################
 ##  11-dp-others  ##
 ####################
