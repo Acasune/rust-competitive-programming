@@ -41,6 +41,10 @@ path = "selections-for-intermediate-contestants/05-binary-search/23-joi2008ho_c.
 name = "24-ALDS1-11-B"
 path = "selections-for-intermediate-contestants/06-dfs/24-ALDS1-11-B.rs"
 
+[[bin]]
+name = "25-aoj-1160"
+path = "selections-for-intermediate-contestants/06-dfs/25-aoj-1160.rs"
+
 ##############################
 ##  08_dp-knapsack-problem  ##
 ##############################
