@@ -1,0 +1,9 @@
+[package]
+name = "AOJ"
+version = "0.1.0"
+authors = ["Acasune <tttt4aaaa@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "ALDS1_1_A"
+path = "ALDS1/ALDS1_1_A.rs"
