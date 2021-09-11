@@ -1,4 +1,5 @@
-﻿use std::{io::*, str::FromStr};
+﻿use std::cmp::{max, min};
+use std::{io::*, str::FromStr};
 
 #[allow(unused_macros)]
 macro_rules! scan {
@@ -52,19 +53,18 @@ fn main() {
     let mut sc = Scanner::new(cin);
 
     sc.new_line();
-    let N = sc.get();
-    let n: Vec<i64> = sc.get_as_vec();
-    for i in 0..n.len() {
-        let t: i64 = i as i64;
-        if t + 1 != n[i] {
-            println!("{}", i + 1);
-            return;
-        }
-    }
+    let a: i64 = sc.get();
+    let b: i64 = sc.get();
+    let l = max(a, b);
+    let r = min(a, b);
+
+    println!("{}", gcd(l, r));
 }
 
-int insertionSort(mut A, mut N) {
-  for i in 0..N {
-    
-  }
+fn gcd(a: i64, b: i64) -> i64 {
+    if a % b == 0 {
+        b
+    } else {
+        gcd(b, a % b)
+    }
 }
