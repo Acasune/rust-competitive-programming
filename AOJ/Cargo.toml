@@ -115,3 +115,7 @@ path = "ALDS1/ALDS1_7_C.rs"
 [[bin]]
 name = "ALDS1_7_D"
 path = "ALDS1/ALDS1_7_D.rs"
+
+[[bin]]
+name = "ALDS1_8_A"
+path = "ALDS1/ALDS1_8_A.rs"
