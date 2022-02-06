@@ -102,5 +102,9 @@ path = "src/037.rs"
 name = "038"
 path = "src/038.rs"
 
+[[bin]]
+name = "039"
+path = "src/039.rs"
+
 [dependencies]
 itertools = "0.10.1"
