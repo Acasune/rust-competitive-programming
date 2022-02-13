@@ -1,4 +1,8 @@
-use std::{cmp::{max, min}, io::*, str::FromStr};
+use std::{
+    cmp::{max, min},
+    io::*,
+    str::FromStr,
+};
 
 #[allow(unused_macros)]
 macro_rules! scan {
@@ -52,41 +56,58 @@ fn main() {
     let mut sc = Scanner::new(cin);
 
     sc.new_line();
-    let n:usize = sc.get();
+    let N: usize = sc.get();
+    let K: usize = sc.get();
 
     sc.new_line();
-    let mut v:Vec<char> = sc.get::<String>().chars().collect();
-
-    let mut l = vec![0;n];
-    let mut r = vec![0;n];
-
-    l[0]=if v[0]=='W'{1} else {0};
-    for i in 1..n {
-        if v[i]=='W'{
-            l[i] = l[i-1] + 1;
-        } else {l[i] = l[i-1]};
+    let mut P = sc.get_as_vec::<usize>();
+    for i in 0..N {
+        P[i] -= 1;
     }
-    r[n-1]=if v[n-1]=='R'{1} else {0};
-    for i in (0..n-1).rev() {
-        if v[i]=='R'{
-            r[i] = r[i+1] + 1;
-        } else {r[i] = r[i+1]};
+    sc.new_line();
+    let C = sc.get_as_vec::<i64>();
+
+    let mut ret = -1_000_000_000_000_000;
+
+    for i in 0..N {
+        let mut idxes = vec![0; N];
+        let mut vals = vec![0; N];
+        let mut idx_cnt = vec![0; N];
+        let mut looped = false;
+        let mut idx = i;
+        let mut past_idx = i;
+        let mut points = 0;
+        let mut tmp_max = -1_000_000_000_000_000;
+        let mut k = 1;
+        loop {
+            if k > K {
+                break;
+            }
+            past_idx = idx;
+            idx = P[idx];
+            if idx_cnt[idx] != 0 && !looped {
+                // cycled
+                // cycle size: k - idx_cnt[idx]
+                let cycle_size = k - idx_cnt[idx] as usize;
+                let points_per_cycle = vals[past_idx] - vals[idx] + C[idx];
+                // remain turns : K-k
+                let cnt_cycle = (K - k) / (cycle_size);
+
+                if points_per_cycle > 0 {
+                    points += cnt_cycle as i64 * points_per_cycle;
+                }
+
+                k = k + cnt_cycle * cycle_size;
+                looped = true;
+            }
+            points += C[idx];
+            vals[idx] = points;
+            tmp_max = tmp_max.max(points);
+            idx_cnt[idx] = k as i64;
+            k += 1;
+        }
+        ret = ret.max(tmp_max);
     }
-    let mut ans =1_000_000_010;
 
-    if l[n-1]==n || r[0]==n {
-        println!("0");
-        return;
-    }
-
-    for i in 0..n-1 {
-        let mut tmp;
-        tmp = min(l[i], r[i+1]);
-        tmp += max(l[i], r[i+1]) - min(l[i], r[i+1]);
-        ans = min(ans, tmp);
-    }
-
-    println!("{}",ans);
-
-
+    println!("{}", ret);
 }

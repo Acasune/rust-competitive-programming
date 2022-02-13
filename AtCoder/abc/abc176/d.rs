@@ -1,4 +1,9 @@
-use std::{cmp::{max, min}, io::*, str::FromStr};
+use std::{
+    cmp::{max, min, Reverse},
+    collections::{BinaryHeap, VecDeque},
+    io::*,
+    str::FromStr,
+};
 
 #[allow(unused_macros)]
 macro_rules! scan {
@@ -52,41 +57,63 @@ fn main() {
     let mut sc = Scanner::new(cin);
 
     sc.new_line();
-    let n:usize = sc.get();
+    let H: usize = sc.get();
+    let W: usize = sc.get();
 
     sc.new_line();
-    let mut v:Vec<char> = sc.get::<String>().chars().collect();
+    let CH = sc.get::<usize>() - 1;
+    let CW = sc.get::<usize>() - 1;
 
-    let mut l = vec![0;n];
-    let mut r = vec![0;n];
+    sc.new_line();
+    let DH = sc.get::<usize>() - 1;
+    let DW = sc.get::<usize>() - 1;
 
-    l[0]=if v[0]=='W'{1} else {0};
-    for i in 1..n {
-        if v[i]=='W'{
-            l[i] = l[i-1] + 1;
-        } else {l[i] = l[i-1]};
+    let mut maze = vec![Vec::<char>::new(); H];
+    let mut visited = vec![vec![100_000_000_000; W]; H];
+
+    for h in 0..H {
+        sc.new_line();
+        maze[h] = sc.get::<String>().chars().collect::<Vec<char>>();
     }
-    r[n-1]=if v[n-1]=='R'{1} else {0};
-    for i in (0..n-1).rev() {
-        if v[i]=='R'{
-            r[i] = r[i+1] + 1;
-        } else {r[i] = r[i+1]};
+    let mut que = BinaryHeap::<Reverse<(usize, usize, usize)>>::new();
+    que.push(Reverse((0, CH, CW)));
+
+    while !que.is_empty() {
+        let Reverse((cnt, h, w)) = que.pop().unwrap();
+        if maze[h][w] == '#' || visited[h][w] <= cnt {
+            continue;
+        }
+        visited[h][w] = cnt;
+        for j in -2..=2 {
+            for i in -2..=2 {
+                if i == 0 && j == 0 {
+                    continue;
+                }
+                let nh = h as i64 + j;
+                let nw = w as i64 + i;
+                if nh < 0 || H as i64 <= nh || nw < 0 || W as i64 <= nw {
+                    continue;
+                }
+                if maze[nh as usize][nw as usize] == '#' {
+                    continue;
+                }
+                if (i64::abs(i) == 1 && j == 0) || (i64::abs(j) == 1 && i == 0) {
+                    if visited[nh as usize][nw as usize] <= cnt {
+                        continue;
+                    }
+                    que.push(Reverse((cnt, nh as usize, nw as usize)));
+                } else if cnt + 1 < visited[nh as usize][nw as usize] {
+                    que.push(Reverse((cnt + 1, nh as usize, nw as usize)));
+                }
+            }
+        }
     }
-    let mut ans =1_000_000_010;
-
-    if l[n-1]==n || r[0]==n {
-        println!("0");
-        return;
-    }
-
-    for i in 0..n-1 {
-        let mut tmp;
-        tmp = min(l[i], r[i+1]);
-        tmp += max(l[i], r[i+1]) - min(l[i], r[i+1]);
-        ans = min(ans, tmp);
-    }
-
-    println!("{}",ans);
-
-
+    println!(
+        "{}",
+        if visited[DH][DW] != 100_000_000_000 {
+            visited[DH][DW] as i64
+        } else {
+            -1
+        }
+    );
 }
