@@ -493,6 +493,10 @@ path = "abc192/b.rs"
 name = "abc192-c"
 path = "abc192/c.rs"
 
+[[bin]]
+name = "abc192-d"
+path = "abc192/d.rs"
+
 ##############
 ##  abc193  ##
 ##############
