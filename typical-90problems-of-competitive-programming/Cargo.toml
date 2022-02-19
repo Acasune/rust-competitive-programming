@@ -131,6 +131,10 @@ name = "044"
 path = "src/044.rs"
 
 [[bin]]
+name = "046"
+path = "src/046.rs"
+
+[[bin]]
 name = "048"
 path = "src/048.rs"
 
