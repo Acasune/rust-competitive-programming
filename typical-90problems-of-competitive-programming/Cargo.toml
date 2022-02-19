@@ -87,6 +87,10 @@ name = "029"
 path = "src/029.rs"
 
 [[bin]]
+name = "030"
+path = "src/030.rs"
+
+[[bin]]
 name = "032"
 path = "src/032.rs"
 
