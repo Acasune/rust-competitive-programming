@@ -4,6 +4,8 @@ version = "0.1.0"
 authors = ["Acasune <tttt4aaaa@gmail.com>"]
 edition = "2018"
 
+[dependencies]
+proconio = "0.3.6"
 
 ##############
 ##  abc170  ##
