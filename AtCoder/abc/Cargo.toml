@@ -5,6 +5,7 @@ authors = ["Acasune <tttt4aaaa@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+itertools = "0.10.3"
 proconio = "0.3.6"
 
 ##############
@@ -602,6 +603,26 @@ path = "abc197/c.rs"
 [[bin]]
 name = "abc197-d"
 path = "abc197/d.rs"
+
+##############
+##  abc198  ##
+##############
+
+[[bin]]
+name = "abc198-a"
+path = "abc198/a.rs"
+
+[[bin]]
+name = "abc198-b"
+path = "abc198/b.rs"
+
+[[bin]]
+name = "abc198-c"
+path = "abc198/c.rs"
+
+[[bin]]
+name = "abc198-d"
+path = "abc198/d.rs"
 
 ##############
 ##  abc239  ##
