@@ -120,6 +120,9 @@ path = "abc174/c.rs"
 name = "abc174-d"
 path = "abc174/d.rs"
 
+[[bin]]
+name = "abc174-e"
+path = "abc174/e.rs"
 
 ##############
 ##  abc175  ##
