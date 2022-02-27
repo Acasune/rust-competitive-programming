@@ -820,3 +820,7 @@ path = "abc241/c.rs"
 [[bin]]
 name = "abc241-d"
 path = "abc241/d.rs"
+
+[[bin]]
+name = "abc241-e"
+path = "abc241/e.rs"
