@@ -29,9 +29,7 @@ fn main() {
         let mut ans: i64 = 0;
         while j < (cs.len() + 1) / 2 {
             let mut cnt = cs[j] as i64 - 'A' as i64;
-            cnt = cnt * memo[(n+1) / 2 - i-1 ];
-            // cnt = cnt * (calc(i + 1, cs.len() - i - 2, md) % md) % md;
-            // println!("{}  aaa", cnt);
+            cnt = cnt * memo[(n + 1) / 2 - i - 1];
             ans += cnt;
             i += 1;
             j += 1;
@@ -72,7 +70,7 @@ fn main() {
 }
 
 fn calc(memo: &mut Vec<i64>, md: i64) {
-    memo[0] =1;
+    memo[0] = 1;
     memo[1] = 26;
     for i in 2..memo.len() {
         memo[i] = memo[i - 1] * 26;
