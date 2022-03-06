@@ -1,111 +1,29 @@
 #![allow(unused_imports)]
 #![allow(non_snake_case)]
-use itertools::Itertools;
-use proconio::input;
-use std::collections::HashMap;
-use std::hash::Hash;
-use std::iter::FromIterator;
-use std::{
-    cmp::{max, min},
-    collections::HashSet,
-    f64,
-    io::*,
-    str::FromStr,
-};
+use proconio::marker::*;
+use proconio::*;
 
 fn main() {
     input! {
-        S:String,
+        S:Bytes,
         Q:usize,
         TK:[(usize,usize);Q],
     }
-    let mut chars = S.chars().collect::<Vec<char>>();
-    for (mut t, mut k) in TK {
-        let mut depth = 1usize;
-        let mut cnt = 0;
-        for i in 0..t {
-            if depth > 1_000_000_000_000_000_000 {
-                // cnt += 1;
-                // depth *= 2;
-                break;
-            }
-            cnt += 1;
-            depth *= 2;
-            // t -= 1;
+    let pop_count = |x: usize| -> usize {
+        let mut x = x;
+        let mut ret = 0;
+        while x > 0 {
+            ret += x % 2;
+            x /= 2;
         }
-        let mut ans = 'z';
-
-        if depth > 1_000_000_000_000_000_000 {
-            let mut c = 'z';
-            let idx = (k - 1) / depth;
-            c = chars[idx];
-            let o_c_i = (t - cnt) % 3;
-            let memo = vec!['B', 'C', 'A'];
-            let idx = {
-                if c == 'A' {
-                    0
-                } else if c == 'B' {
-                    1
-                } else {
-                    2
-                }
-            };
-            c = memo[(idx + o_c_i + 2) % 3];
-            ans = dps(c, k, 0, depth);
-        // println!("{}", "eeee");
-        } else {
-            let mut c = 'z';
-            let idx = (k - 1) / depth;
-            c = chars[idx];
-            ans = dps(c, k - idx * depth, 0, depth);
-        }
-        println!("{}", ans);
-    }
-}
-
-fn dps(c: char, i: usize, l: usize, r: usize) -> char {
-    if l == r - 1 {
-        return c;
-    }
-    let memo = vec![('B', 'C'), ('C', 'A'), ('A', 'B')];
-    let idx = {
-        if c == 'A' {
-            0
-        } else if c == 'B' {
-            1
-        } else {
-            2
-        }
+        return ret;
     };
 
-    let m = (l + r) / 2;
-    let (lc, rc) = memo[idx];
-    if i <= m {
-        return dps(lc, i, l, m);
-    } else {
-        return dps(rc, i, m, r);
-    }
-}
-fn dps2(c: char, i: usize, t: usize, l: usize, r: usize) -> char {
-    if l == r - 1 {
-        return c;
-    }
-    let memo = vec![('B', 'C'), ('C', 'A'), ('A', 'B')];
-    let idx = {
-        if c == 'A' {
-            0
-        } else if c == 'B' {
-            1
-        } else {
-            2
-        }
-    };
-
-    let m = (l + r) / 2;
-    let (lc, rc) = memo[idx];
-    if i <= m {
-        return dps(lc, i, l, m);
-    } else {
-        return dps(rc, i, m, r);
+    for (t, mut k) in TK {
+        k -= 1;
+        let upper = k / usize::pow(2usize, (60usize).min(t) as u32);
+        let lower: usize = k % usize::pow(2usize, (60usize).min(t) as u32);
+        let ans = b'A' + (((S[upper] + pop_count(lower) as u8 - b'A') as usize + t) % 3) as u8;
+        println!("{}", ans as char);
     }
 }
