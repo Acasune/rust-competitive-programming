@@ -10,10 +10,10 @@ use std::{f64, i64};
 
 const inf: i64 = i64::MAX / 10;
 const md: i64 = 1_000_000_007;
-const eps: f64 = 0.000_000_000_001;
+const eps: f64 = 1e-10;
 
 fn main() {
     input! {
-        mut N:i64,
+        N:i64,
     }
 }
