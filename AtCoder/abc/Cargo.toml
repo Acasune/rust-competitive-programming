@@ -1080,6 +1080,30 @@ name = "abc216-e"
 path = "abc216/e.rs"
 
 ##############
+##  abc217  ##
+##############
+
+[[bin]]
+name = "abc217-a"
+path = "abc217/a.rs"
+
+[[bin]]
+name = "abc217-b"
+path = "abc217/b.rs"
+
+[[bin]]
+name = "abc217-c"
+path = "abc217/c.rs"
+
+[[bin]]
+name = "abc217-d"
+path = "abc217/d.rs"
+
+[[bin]]
+name = "abc217-e"
+path = "abc217/e.rs"
+
+##############
 ##  abc239  ##
 ##############
 
