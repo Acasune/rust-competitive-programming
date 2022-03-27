@@ -1348,3 +1348,7 @@ path = "abc245/d.rs"
 [[bin]]
 name = "abc245-e"
 path = "abc245/e.rs"
+
+[[bin]]
+name = "abc245-f"
+path = "abc245/f.rs"
