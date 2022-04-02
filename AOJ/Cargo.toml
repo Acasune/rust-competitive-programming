@@ -203,3 +203,11 @@ path = "ALDS1/ALDS1_13_B.rs"
 [[bin]]
 name = "ALDS1_13_C"
 path = "ALDS1/ALDS1_13_C.rs"
+
+[[bin]]
+name = "GRL_1_A"
+path = "GRL1/GRL1_1_A.rs"
+
+[[bin]]
+name = "NTL_1_E"
+path = "NTL1/NTL1_1_E.rs"
