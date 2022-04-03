@@ -23,11 +23,17 @@ fn main() {
     let ax = ax - 1;
     let ay = ay - 1;
     let mut que = VecDeque::new();
-    let dyx = [(1, 1), (-1, 1), (1, -1), (-1, -1)];
+    let dy = [1, -1, 1, -1];
+    let dx = [1, 1, -1, -1];
     let mut visited = vec![vec![vec![inf; 4]; N]; N];
     let mut visited2 = vec![vec![vec![false; 4]; N]; N];
-    for &(dy, dx) in &dyx {
-        if ay + dy < 0 as i64 || ay + dy >= N as i64 || ax + dx < 0 as i64 || ax + dx >= N as i64 {
+    for i in 0..4 {
+        let dy = dy[i];
+        let dx = dx[i];
+        if !(0 <= ay + dy && ay + dy < N as i64) {
+            continue;
+        }
+        if !(0 <= ax + dx && ax + dx < N as i64) {
             continue;
         }
         let ny = (ay + dy) as usize;
@@ -35,12 +41,10 @@ fn main() {
         if board[ny][nx] == '#' {
             continue;
         }
-        let ndir = transform(dy, dx);
-        que.push_back((ay, ax, dy, dx));
-        visited[ay as usize][ax as usize][ndir as usize] = 1;
+        que.push_back((ay, ax, i));
+        visited[ay as usize][ax as usize][i] = 1;
     }
-    while let Some((y, x, pdy, pdx)) = que.pop_front() {
-        let pdir = transform(pdy, pdx);
+    while let Some((y, x, pdir)) = que.pop_front() {
         if y as usize == by && x as usize == bx {
             println!("{}", visited[y as usize][x as usize][pdir as usize]);
             return;
@@ -51,20 +55,23 @@ fn main() {
 
         visited2[y as usize][x as usize][pdir as usize] = true;
         let mut pval = visited[y as usize][x as usize][pdir as usize];
-        for &(ndy, ndx) in &dyx {
-            if y + ndy < 0 as i64
-                || y + ndy >= N as i64
-                || x + ndx < 0 as i64
-                || x + ndx >= N as i64
-            {
+        for i in 0..4 {
+            let ndy = dy[i];
+            let ndx = dx[i];
+            let ny = y + ndy;
+            let nx = x + ndx;
+            if !(0 <= ny && ny < N as i64) {
                 continue;
             }
-            let ny = (y + ndy) as usize;
-            let nx = (x + ndx) as usize;
+            if !(0 <= nx && nx < N as i64) {
+                continue;
+            }
+            let ny = ny as usize;
+            let nx = nx as usize;
             if board[ny][nx] == '#' {
                 continue;
             }
-            let ndir = transform(ndy, ndx);
+            let ndir = i;
             let mut val = pval;
 
             if ndir != pdir {
@@ -73,25 +80,13 @@ fn main() {
             if visited[ny][nx][ndir as usize] > val {
                 visited[ny][nx][ndir as usize] = val;
                 if ndir == pdir {
-                    que.push_front((ny as i64, nx as i64, ndy, ndx));
+                    que.push_front((ny as i64, nx as i64, ndir));
                 } else {
-                    que.push_back((ny as i64, nx as i64, ndy, ndx));
+                    que.push_back((ny as i64, nx as i64, ndir));
                 }
             }
         }
     }
 
     println!("{}", -1);
-}
-
-fn transform(dy: i64, dx: i64) -> i64 {
-    if dy == 1 && dx == 1 {
-        0
-    } else if dy == -1 && dx == 1 {
-        1
-    } else if dy == 1 && dx == -1 {
-        2
-    } else {
-        3
-    }
 }
