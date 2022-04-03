@@ -31,10 +31,8 @@ fn main() {
         }
         A.sort();
         A.reverse();
-        let mut ans = 0;
-        for i in ((K - k) as usize)..N {
-            ans += A[i];
-        }
+        let start = ((K - k).min(N as i64)) as usize;
+        let ans = &A[start..].into_iter().sum::<i64>();
         println!("{}", ans);
     }
 }
