@@ -361,3 +361,11 @@ path = "selections-for-intermediate-contestants/22-mathematical-problems/99-ddcc
 [[bin]]
 name = "100-tenka1-2018-d"
 path = "selections-for-intermediate-contestants/22-mathematical-problems/100-tenka1-2018-d.rs"
+
+#############################
+##  34-range-minimum-query ##
+#############################
+
+[[bin]]
+name = "139-DSL-2-A"
+path = "selections-for-senior-contestants/34-range-minimum-query/139-DSL-2-A.rs"
