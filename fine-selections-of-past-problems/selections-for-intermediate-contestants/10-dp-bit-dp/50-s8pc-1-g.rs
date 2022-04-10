@@ -72,36 +72,36 @@ fn main() {
     dp[0][0][0] = 0; // shortest dist
     dp[0][0][1] = 1; // number of paths
 
-
     for s in 1..(1 << v) {
         // to
         for i in 0..v {
             if s & (1 << i) != 0 {
-            // from
-            if s & (1 << i) != 0 {
-            for j in 0..v {
-                    if dp[s - (1 << i)][j][0] + edges[j][i][0] > edges[j][i][1] {
-                        continue;
-                    }
-                    if dp[s][i][0] < dp[s - (1 << i)][j][0] + edges[j][i][0] {
-                        continue;
-                    } else if dp[s][i][0] == dp[s - (1 << i)][j][0] + edges[j][i][0] {
-                        dp[s][i][1] += dp[s - (1 << i)][j][1];
-                    } else {
-                        dp[s][i][0] = dp[s - (1 << i)][j][0] + edges[j][i][0];
-                        dp[s][i][1] = dp[s - (1 << i)][j][1];
+                // from
+                if s & (1 << i) != 0 {
+                    for j in 0..v {
+                        if dp[s - (1 << i)][j][0] + edges[j][i][0] > edges[j][i][1] {
+                            continue;
+                        }
+                        if dp[s][i][0] < dp[s - (1 << i)][j][0] + edges[j][i][0] {
+                            continue;
+                        } else if dp[s][i][0] == dp[s - (1 << i)][j][0] + edges[j][i][0] {
+                            dp[s][i][1] += dp[s - (1 << i)][j][1];
+                        } else {
+                            dp[s][i][0] = dp[s - (1 << i)][j][0] + edges[j][i][0];
+                            dp[s][i][1] = dp[s - (1 << i)][j][1];
+                        }
                     }
                 }
             }
         }
-    }
 
-    println!(
-        "{}",
-        if dp[(1 << v) - 1][0][1] == 0 {
-            "IMPOSSIBLE".to_string()
-        } else {
-            format!("{} {}", dp[(1 << v) - 1][0][0], dp[(1 << v) - 1][0][1])
-        }
-    );
+        println!(
+            "{}",
+            if dp[(1 << v) - 1][0][1] == 0 {
+                "IMPOSSIBLE".to_string()
+            } else {
+                format!("{} {}", dp[(1 << v) - 1][0][0], dp[(1 << v) - 1][0][1])
+            }
+        );
+    }
 }
