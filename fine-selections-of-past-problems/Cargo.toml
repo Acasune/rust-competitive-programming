@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["Acasune <tttt4aaaa@gmail.com>"]
 edition = "2018"
 
+[dependencies]
+itertools = "0.10.3"
+proconio = "0.3.6"
 
 ########################
 ##  05_binary-search  ##
@@ -369,3 +372,7 @@ path = "selections-for-intermediate-contestants/22-mathematical-problems/100-ten
 [[bin]]
 name = "139-DSL-2-A"
 path = "selections-for-senior-contestants/34-range-minimum-query/139-DSL-2-A.rs"
+
+[[bin]]
+name = "140-agc004-b"
+path = "selections-for-senior-contestants/34-range-minimum-query/140-agc004-b.rs"
