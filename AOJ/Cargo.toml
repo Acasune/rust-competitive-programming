@@ -215,3 +215,7 @@ path = "NTL1/NTL1_1_E.rs"
 [[bin]]
 name = "DSL_2_B"
 path = "DSL1/DSL1_2_B.rs"
+
+[[bin]]
+name = "DSL_2_E"
+path = "DSL1/DSL1_2_E.rs"
