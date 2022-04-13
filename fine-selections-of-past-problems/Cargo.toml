@@ -371,7 +371,11 @@ path = "selections-for-intermediate-contestants/22-mathematical-problems/100-ten
 
 [[bin]]
 name = "134-ALDS1-5-D"
-path = "selections-for-senior-contestants/34-range-minimum-query/134-ALDS1-5-D.rs"
+path = "selections-for-senior-contestants/33-bit/134-ALDS1-5-D.rs"
+
+[[bin]]
+name = "135-aoj-0365"
+path = "selections-for-senior-contestants/33-bit/135-aoj-0365.rs"
 
 #############################
 ##  34-range-minimum-query ##
