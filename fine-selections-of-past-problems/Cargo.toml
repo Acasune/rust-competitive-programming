@@ -366,6 +366,14 @@ name = "100-tenka1-2018-d"
 path = "selections-for-intermediate-contestants/22-mathematical-problems/100-tenka1-2018-d.rs"
 
 #############################
+##  33-binary-indexed-tree ##
+#############################
+
+[[bin]]
+name = "134-ALDS1-5-D"
+path = "selections-for-senior-contestants/34-range-minimum-query/134-ALDS1-5-D.rs"
+
+#############################
 ##  34-range-minimum-query ##
 #############################
 
