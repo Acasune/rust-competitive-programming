@@ -1669,7 +1669,6 @@ path = "abc247/d.rs"
 name = "abc247-e"
 path = "abc247/e.rs"
 
-
 ##############
 ##  abc248  ##
 ##############
@@ -1693,3 +1692,28 @@ path = "abc248/d.rs"
 [[bin]]
 name = "abc248-e"
 path = "abc248/e.rs"
+
+
+##############
+##  abc248  ##
+##############
+
+[[bin]]
+name = "abc249-a"
+path = "abc249/a.rs"
+
+[[bin]]
+name = "abc249-b"
+path = "abc249/b.rs"
+
+[[bin]]
+name = "abc249-c"
+path = "abc249/c.rs"
+
+[[bin]]
+name = "abc249-d"
+path = "abc249/d.rs"
+
+[[bin]]
+name = "abc249-e"
+path = "abc249/e.rs"
