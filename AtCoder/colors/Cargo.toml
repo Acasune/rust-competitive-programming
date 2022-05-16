@@ -13,3 +13,7 @@ proconio = "0.3.6"
 [[bin]]
 name = "abc126-e"
 path = "cyan/abc126e.rs"
+
+[[bin]]
+name = "abc129-e"
+path = "cyan/abc129e.rs"
