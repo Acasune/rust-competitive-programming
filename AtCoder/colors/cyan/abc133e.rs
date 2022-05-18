@@ -52,14 +52,13 @@ fn main() {
             k -= 1;
         }
     }
-    let mut ans = 1;
-    for e in dp {
-        if e == inf as usize {
-            ans = 0;
-            break;
+    let ans = dp.into_iter().fold(1usize, |cum, x| {
+        if x == inf as usize {
+            cum * 0usize
+        } else {
+            cum * x % md
         }
-        ans *= e;
-        ans %= md;
-    }
+    });
+
     println!("{}", ans);
 }
