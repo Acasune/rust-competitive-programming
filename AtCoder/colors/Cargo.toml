@@ -45,3 +45,7 @@ path = "cyan/abc151e.rs"
 [[bin]]
 name = "abc152-e"
 path = "cyan/abc152e.rs"
+
+[[bin]]
+name = "abc154-e"
+path = "cyan/abc154e.rs"
