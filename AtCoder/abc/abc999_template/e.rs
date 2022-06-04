@@ -8,7 +8,7 @@ use proconio::marker::*;
 use proconio::*;
 use std::cmp::Reverse;
 use std::collections::{BinaryHeap, HashMap, HashSet};
-use std::{f64, i64, usize};
+use std::{char,i32,f32,f64, i64, usize};
 
 const inf_i: i64 = i64::MAX / 10;
 const inf_u: usize = usize::MAX / 10;
