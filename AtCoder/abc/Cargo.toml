@@ -1916,6 +1916,30 @@ name = "abc252-f"
 path = "abc252/f.rs"
 
 ##############
+##  abc253  ##
+##############
+
+[[bin]]
+name = "abc253-a"
+path = "abc253/a.rs"
+
+[[bin]]
+name = "abc253-b"
+path = "abc253/b.rs"
+
+[[bin]]
+name = "abc253-c"
+path = "abc253/c.rs"
+
+[[bin]]
+name = "abc253-d"
+path = "abc253/d.rs"
+
+[[bin]]
+name = "abc253-e"
+path = "abc253/e.rs"
+
+##############
 ##  abc254  ##
 ##############
 
