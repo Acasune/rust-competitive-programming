@@ -10,6 +10,10 @@ edition = "2018"
 itertools = "0.10.3"
 proconio = "0.3.6"
 
+##############
+##   cyan   ##
+##############
+
 [[bin]]
 name = "abc126-e"
 path = "cyan/abc126e.rs"
@@ -93,3 +97,11 @@ path = "cyan/abc171e.rs"
 [[bin]]
 name = "abc221-e"
 path = "cyan/abc221e.rs"
+
+##############
+##   blue   ##
+##############
+
+[[bin]]
+name = "abc130-e"
+path = "blue/abc130e.rs"
