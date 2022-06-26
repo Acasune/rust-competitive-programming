@@ -2048,10 +2048,6 @@ path = "abc256/d.rs"
 name = "abc256-e"
 path = "abc256/e.rs"
 
-[[bin]]
-name = "abc256-f"
-path = "abc256/f.rs"
-
 ##############
 ##  abc257  ##
 ##############
