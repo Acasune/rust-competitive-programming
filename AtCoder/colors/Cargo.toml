@@ -119,6 +119,10 @@ name = "abc137-e"
 path = "blue/abc137e.rs"
 
 [[bin]]
+name = "abc140-e"
+path = "blue/abc140e.rs"
+
+[[bin]]
 name = "abc146-e"
 path = "blue/abc146e.rs"
 
