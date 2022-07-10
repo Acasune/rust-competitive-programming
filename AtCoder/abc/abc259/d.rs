@@ -65,22 +65,19 @@ fn main() {
         }
         let mut visited = vec![false; N];
         let mut que = VecDeque::<usize>::new();
-        // visited[st] = true;
+        visited[st] = true;
         if gls.contains(&st) {
             flg = true;
         }
         que.push_back(st);
-        while let Some(sa) = que.pop_back() {
-            if visited[sa] {
-                continue;
-            }
-            visited[sa] = true;
+        while let Some(sa) = que.pop_front() {
             if gls.contains(&sa) {
                 flg = true;
             }
 
             for &nxt in &G[sa] {
                 if !visited[nxt] {
+                    visited[nxt] = true;
                     que.push_back(nxt);
                 }
             }
