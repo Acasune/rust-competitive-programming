@@ -58,17 +58,14 @@ fn main() {
                 }
             }
             if cnt == N {
-                // println!("upper {} {}", l, r);
                 tree.add(r - l + 1, M - l + 2, 1);
             }
             r += 1;
         }
         while l < r && cnt == N {
             if cnt == N && (l != p_l) {
-                // println!("undr {} {} {}", p_l, l, r);
                 tree.add(r - l, M - l + 2, 1);
             }
-            // println!("{}", cnt);
             for &ll in &inv_l[l] {
                 visited[ll][0] = false;
                 if !visited[ll][1] {

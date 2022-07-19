@@ -4,10 +4,12 @@
 #![allow(non_upper_case_globals)]
 #![allow(unused_variables)]
 
+use itertools::Itertools;
 use proconio::marker::*;
 use proconio::*;
+use std::cmp::Ordering::*;
 use std::cmp::Reverse;
-use std::collections::{BinaryHeap, HashMap, HashSet};
+use std::collections::{BinaryHeap, HashMap, HashSet, VecDeque};
 use std::{char, f32, f64, i32, i64, usize};
 
 const inf_i: i64 = i64::MAX / 10;
@@ -33,35 +35,17 @@ fn main() {
         A:[usize;N],
         B:[usize;N]
     }
-    let mut heap = BinaryHeap::new();
-    for i in 0..N {
-        heap.push((A[i], Reverse(i), B[i]));
-    }
     let mut ans = vec![];
-    for j in 0..X {
-        if let Some((a, Reverse(i), b)) = heap.pop() {
-            ans.push(i + 1);
-        }
+    let mut students = vec![];
+    for (i, (a, b)) in A.into_iter().zip(B.into_iter()).enumerate() {
+        students.push((a, b, i + 1));
     }
+    students.sort_by_key(|&(a, _, i)| (Reverse(a), i));
+    students[X..].sort_by_key(|&(_, b, i)| (Reverse(b), i));
+    students[(X + Y)..].sort_by_key(|&(a, b, i)| (Reverse(a + b), i));
 
-    let mut heap2 = BinaryHeap::new();
-    while let Some((a, Reverse(i), b)) = heap.pop() {
-        heap2.push((b, Reverse(i), a));
-    }
-    for j in 0..Y {
-        if let Some((b, Reverse(i), a)) = heap2.pop() {
-            ans.push(i + 1);
-        }
-    }
-
-    let mut heap3 = BinaryHeap::new();
-    while let Some((a, Reverse(i), b)) = heap2.pop() {
-        heap3.push((a + b, Reverse(i)));
-    }
-    for j in 0..Z {
-        if let Some((b, Reverse(i))) = heap3.pop() {
-            ans.push(i + 1);
-        }
+    for i in 0..(X + Y + Z) {
+        ans.push(students[i].2);
     }
     ans.sort();
     for a in ans {
