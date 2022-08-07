@@ -33,17 +33,9 @@ fn main() {
         mut A:[(usize);5],
     }
     A.sort();
-    let cnt = A
-        .into_iter()
-        .fold(HashMap::new(), |mut mp, c| {
-            *mp.entry(c).or_insert(0) += 1;
-            mp
-        })
-        .values()
-        .copied()
-        .sorted()
-        .collect::<Vec<_>>();
-    if cnt == vec![2, 3] {
+    let a = A[0];
+    let b = A[4];
+    if A == vec![a, a, a, b, b] || A == vec![a, a, b, b, b] {
         println!("{}", "Yes");
     } else {
         println!("{}", "No");
