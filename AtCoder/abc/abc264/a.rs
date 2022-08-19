@@ -32,9 +32,5 @@ fn main() {
         L:Usize1,
         R:usize
     }
-    let S = "atcoder".to_string().chars().collect::<Vec<char>>();
-    for i in L..R {
-        print!("{}", S[i]);
-    }
-    println!();
+    println!("{}", &"atcoder"[L..R]);
 }

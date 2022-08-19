@@ -32,38 +32,20 @@ fn main() {
         R:Usize1,C:Usize1
     }
     let mut flg = false;
-    for c in 0..8 {
+    for c in 0..15 {
         if c % 2 != 0 {
             continue;
         }
         if c == R || 14 - c == R {
             // R == c
-            if c <= C && C < 15 - c {
+            if (c <= C && C < 15 - c) || (14 - c <= C && C < c) {
                 flg = true;
             }
         }
 
         if c == C || 14 - c == C {
             // C == c
-            if c <= R && R < 15 - c {
-                flg = true;
-            }
-        }
-    }
-    for c in 8..15 {
-        if c % 2 != 0 {
-            continue;
-        }
-        if c == R || 14 - c == R {
-            // R == c
-            if 14 - c <= C && C < c {
-                flg = true;
-            }
-        }
-
-        if c == C || 14 - c == C {
-            // C == c
-            if 14 - c <= R && R < c {
+            if (c <= R && R < 15 - c) || (14 - c <= R && R < c) {
                 flg = true;
             }
         }

@@ -66,7 +66,6 @@ fn main() {
             }
             cnt += 1;
             S.swap(i, i + 1);
-            // println!("{:?}", S);
         }
     }
     println!("{}", cnt);
