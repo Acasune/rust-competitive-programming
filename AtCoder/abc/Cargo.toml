@@ -2239,3 +2239,27 @@ path = "abc264/d.rs"
 [[bin]]
 name = "abc264-e"
 path = "abc264/e.rs"
+
+##############
+##  abc265  ##
+##############
+
+[[bin]]
+name = "abc265-a"
+path = "abc265/a.rs"
+
+[[bin]]
+name = "abc265-b"
+path = "abc265/b.rs"
+
+[[bin]]
+name = "abc265-c"
+path = "abc265/c.rs"
+
+[[bin]]
+name = "abc265-d"
+path = "abc265/d.rs"
+
+[[bin]]
+name = "abc265-e"
+path = "abc265/e.rs"
