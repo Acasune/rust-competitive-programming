@@ -9,6 +9,7 @@ edition = "2018"
 [dependencies]
 itertools = "0.10.3"
 proconio = "0.3.6"
+superslice="1.0.0"
 
 ##############
 
@@ -27,3 +28,15 @@ path = "abc246d.rs"
 [[bin]]
 name = "abc246-e"
 path = "abc246e.rs"
+
+[[bin]]
+name = "abc247-d"
+path = "abc247d.rs"
+
+[[bin]]
+name = "abc247-e"
+path = "abc247e.rs"
+
+[[bin]]
+name = "abc248-d"
+path = "abc248d.rs"
