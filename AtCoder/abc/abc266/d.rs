@@ -46,24 +46,13 @@ fn main() {
     dp[0][0] = snukes[0][0];
     for t in 1..=T {
         for x in 0..5 {
-            if t <= 4 {
-                if t < x {
-                    continue;
-                } else if t == x {
-                    if x == 0 {
-                        dp[t][x] = dp[t - 1][x] + snukes[t][x];
-                    } else {
-                        dp[t][x] = dp[t - 1][x - 1].max(dp[t - 1][x]) + snukes[t][x];
-                    }
+            if t < x {
+                continue;
+            } else if t == x {
+                if x == 0 {
+                    dp[t][x] = dp[t - 1][x] + snukes[t][x];
                 } else {
-                    if x == 0 {
-                        dp[t][x] = dp[t - 1][x].max(dp[t - 1][x + 1]) + snukes[t][x];
-                    } else if x == 4 {
-                        dp[t][x] = dp[t - 1][x - 1].max(dp[t - 1][x]) + snukes[t][x];
-                    } else {
-                        let tmp = dp[t - 1][x - 1].max(dp[t - 1][x + 1]);
-                        dp[t][x] = tmp.max(dp[t - 1][x]) + snukes[t][x];
-                    }
+                    dp[t][x] = dp[t - 1][x - 1].max(dp[t - 1][x]) + snukes[t][x];
                 }
             } else {
                 if x == 0 {
@@ -77,10 +66,8 @@ fn main() {
             }
         }
     }
-    // println!("{:?}", dp[0..100].to_vec());
     let mut ans = 0;
     for x in 0..5 {
-        // println!("{}", ans.max(dp[T][x]));
         ans = ans.max(dp[T][x]);
     }
     println!("{}", ans);
