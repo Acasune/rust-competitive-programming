@@ -80,3 +80,11 @@ path = "abc253d.rs"
 [[bin]]
 name = "abc253-e"
 path = "abc253e.rs"
+
+[[bin]]
+name = "abc254-d"
+path = "abc254d.rs"
+
+[[bin]]
+name = "abc254-e"
+path = "abc254e.rs"
