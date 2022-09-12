@@ -2289,6 +2289,30 @@ name = "abc266-e"
 path = "abc266/e.rs"
 
 ##############
+##  abc267  ##
+##############
+
+[[bin]]
+name = "abc267-a"
+path = "abc267/a.rs"
+
+[[bin]]
+name = "abc267-b"
+path = "abc267/b.rs"
+
+[[bin]]
+name = "abc267-c"
+path = "abc267/c.rs"
+
+[[bin]]
+name = "abc267-d"
+path = "abc267/d.rs"
+
+[[bin]]
+name = "abc267-e"
+path = "abc267/e.rs"
+
+##############
 ##  abc268  ##
 ##############
 
@@ -2307,7 +2331,3 @@ path = "abc268/c.rs"
 [[bin]]
 name = "abc268-d"
 path = "abc268/d.rs"
-
-[[bin]]
-name = "abc268-e"
-path = "abc268/e.rs"
