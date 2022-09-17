@@ -144,3 +144,7 @@ path = "abc261d.rs"
 [[bin]]
 name = "abc261-e"
 path = "abc261e.rs"
+
+[[bin]]
+name = "abc262-d"
+path = "abc262d.rs"
