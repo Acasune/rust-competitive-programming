@@ -2331,3 +2331,31 @@ path = "abc268/c.rs"
 [[bin]]
 name = "abc268-d"
 path = "abc268/d.rs"
+
+##############
+##  abc269  ##
+##############
+
+[[bin]]
+name = "abc269-a"
+path = "abc269/a.rs"
+
+[[bin]]
+name = "abc269-b"
+path = "abc269/b.rs"
+
+[[bin]]
+name = "abc269-c"
+path = "abc269/c.rs"
+
+[[bin]]
+name = "abc269-d"
+path = "abc269/d.rs"
+
+[[bin]]
+name = "abc269-e"
+path = "abc269/e.rs"
+
+[[bin]]
+name = "abc269-f"
+path = "abc269/f.rs"
