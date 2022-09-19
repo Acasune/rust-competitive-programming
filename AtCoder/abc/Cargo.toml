@@ -7,6 +7,7 @@ edition = "2018"
 [dependencies]
 itertools = "0.9.0"
 proconio = "0.3.6"
+superslice="1.0.0"
 
 ##############
 ##  abc167  ##
@@ -2359,3 +2360,27 @@ path = "abc269/e.rs"
 [[bin]]
 name = "abc269-f"
 path = "abc269/f.rs"
+
+##############
+##  abc270  ##
+##############
+
+[[bin]]
+name = "abc270-a"
+path = "abc270/a.rs"
+
+[[bin]]
+name = "abc270-b"
+path = "abc270/b.rs"
+
+[[bin]]
+name = "abc270-c"
+path = "abc270/c.rs"
+
+[[bin]]
+name = "abc270-d"
+path = "abc270/d.rs"
+
+[[bin]]
+name = "abc270-e"
+path = "abc270/e.rs"

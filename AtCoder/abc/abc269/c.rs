@@ -37,7 +37,6 @@ fn main() {
             elem.push(N & 1 << i)
         }
     }
-    // println!("{:?}", elem);
     let mut ans = vec![];
     dfs(0, 0, &elem, &mut ans);
     ans.sort();

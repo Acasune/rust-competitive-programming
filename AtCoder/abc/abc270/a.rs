@@ -29,30 +29,8 @@ const d4yx: [(i64, i64); 4] = [(1, 0), (0, 1), (-1, 0), (0, -1)];
 
 fn main() {
     input! {
-        mp:[Chars;10]
+        A:usize,B:usize
     }
-    let mut mps = vec![vec!['.'; 12]; 12];
-    for i in 0..10 {
-        for j in 0..10 {
-            mps[i + 1][j + 1] = mp[i][j];
-        }
-    }
-    let mut a = 0;
-    let mut b = 0;
-    let mut c = 0;
-    let mut d = 0;
-    for i in 1..=10 {
-        for j in 1..=10 {
-            if mps[i - 1][j] == '.' && mps[i][j - 1] == '.' && mps[i][j] == '#' {
-                a = i;
-                b = j;
-            }
-            if mps[i + 1][j] == '.' && mps[i][j + 1] == '.' && mps[i][j] == '#' {
-                c = i;
-                d = j;
-            }
-        }
-    }
-    println!("{} {}", a, c);
-    println!("{} {}", b, d);
+    let c = A | B;
+    println!("{}", c);
 }

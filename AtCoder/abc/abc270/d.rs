@@ -9,6 +9,7 @@ use proconio::*;
 use std::cmp::Reverse;
 use std::collections::{BinaryHeap, HashMap, HashSet};
 use std::{char, f32, f64, i32, i64, usize};
+use superslice::*;
 
 const inf_i: i64 = (i64::MAX / 10) * 9;
 const inf_u: usize = (usize::MAX / 10) * 9;
@@ -29,30 +30,22 @@ const d4yx: [(i64, i64); 4] = [(1, 0), (0, 1), (-1, 0), (0, -1)];
 
 fn main() {
     input! {
-        mp:[Chars;10]
+        N:usize,K:usize,
+        mut A:[usize;K],
     }
-    let mut mps = vec![vec!['.'; 12]; 12];
-    for i in 0..10 {
-        for j in 0..10 {
-            mps[i + 1][j + 1] = mp[i][j];
-        }
-    }
-    let mut a = 0;
-    let mut b = 0;
-    let mut c = 0;
-    let mut d = 0;
-    for i in 1..=10 {
-        for j in 1..=10 {
-            if mps[i - 1][j] == '.' && mps[i][j - 1] == '.' && mps[i][j] == '#' {
-                a = i;
-                b = j;
+
+    let mut dp = vec![0; N + 1];
+    for i in 1..=N {
+        let mut mx = 0;
+        for j in 0..K {
+            let a = A[j];
+            if i < a {
+                break;
             }
-            if mps[i + 1][j] == '.' && mps[i][j + 1] == '.' && mps[i][j] == '#' {
-                c = i;
-                d = j;
-            }
+            mx = mx.max(i - dp[i - a]);
         }
+        dp[i] = mx;
     }
-    println!("{} {}", a, c);
-    println!("{} {}", b, d);
+
+    println!("{}", dp[N]);
 }

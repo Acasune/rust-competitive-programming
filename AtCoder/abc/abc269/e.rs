@@ -59,13 +59,8 @@ fn main() {
     let cin = cin.lock();
     let mut sc = Scanner::new(cin);
     sc.new_line();
-    let mut N: i64 = sc.get();
+    let N: i64 = sc.get();
 
-    // let mut x = 1_000;
-    // while x > 0 {
-    //     x /= 2;
-    //     println!("{}", x);
-    // }
     let mut n_r = N - 1;
     let mut a = 1;
     let mut b = N;
@@ -73,43 +68,37 @@ fn main() {
     let mut d = N;
     while b != a {
         let m = (a + b) / 2;
-        print!("? {} {} {} {}\n", a, m, c, d);
-        io::stdout().flush().unwrap();
-        sc.new_line();
-        let mut t: i64 = sc.get();
+        let t = interactive(a, m, c, d, &mut sc);
         if m - a + 1 > t {
-            // a<few r<m
             b = m;
             n_r = t
         } else {
             a = m + 1;
             n_r = n_r - t;
         }
-        // println!("hhh {} {}", a, b);
     }
-    // println!("ab {} {}", a, b);
-    let aa = a;
-    let bb = b;
+    let ans1 = a;
     a = 1;
     b = N;
     n_r = N - 1;
     while d != c {
         let m = (c + d) / 2;
-        print!("? {} {} {} {}\n", a, b, c, m);
-        io::stdout().flush().unwrap();
-        sc.new_line();
-        let mut t: i64 = sc.get();
+        let t = interactive(a, b, c, m, &mut sc);
         if m - c + 1 > t {
-            // a<few r<m
             d = m;
             n_r = t
         } else {
             c = m + 1;
             n_r = n_r - t;
         }
-        // println!("hhh {} {}", a, b);
     }
-    print!("! {} {}\n", aa, c);
-    io::stdout().flush().unwrap();
-    return;
+    let ans2 = c;
+    println!("! {} {}", ans1, ans2);
+}
+
+fn interactive(a: i64, b: i64, c: i64, d: i64, sc: &mut Scanner<StdinLock>) -> i64 {
+    println!("? {} {} {} {}", a, b, c, d);
+    sc.new_line();
+    let t = sc.get();
+    return t;
 }
