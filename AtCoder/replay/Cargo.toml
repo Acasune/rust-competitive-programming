@@ -148,3 +148,43 @@ path = "abc261e.rs"
 [[bin]]
 name = "abc262-d"
 path = "abc262d.rs"
+
+[[bin]]
+name = "abc263-d"
+path = "abc263d.rs"
+
+[[bin]]
+name = "abc263-e"
+path = "abc263e.rs"
+
+[[bin]]
+name = "abc264-d"
+path = "abc264d.rs"
+
+[[bin]]
+name = "abc264-e"
+path = "abc264e.rs"
+
+[[bin]]
+name = "abc265-d"
+path = "abc265d.rs"
+
+[[bin]]
+name = "abc265-e"
+path = "abc265e.rs"
+
+[[bin]]
+name = "abc266-d"
+path = "abc266d.rs"
+
+[[bin]]
+name = "abc266-e"
+path = "abc266e.rs"
+
+[[bin]]
+name = "abc267-d"
+path = "abc267d.rs"
+
+[[bin]]
+name = "abc267-e"
+path = "abc267e.rs"
