@@ -10,6 +10,7 @@ edition = "2018"
 itertools = "0.10.3"
 proconio = "0.3.6"
 superslice="1.0.0"
+rand="0.7.3"
 
 ##############
 
@@ -204,3 +205,7 @@ path = "abc248e_2.rs"
 [[bin]]
 name = "abc249-d-2"
 path = "abc249d_2.rs"
+
+[[bin]]
+name = "abc250-e-2"
+path = "abc250e_2.rs"

@@ -8,6 +8,7 @@ edition = "2018"
 itertools = "0.9.0"
 proconio = "0.3.6"
 superslice="1.0.0"
+rand="0.7.3"
 
 ##############
 ##  abc167  ##
@@ -2356,10 +2357,6 @@ path = "abc269/d.rs"
 [[bin]]
 name = "abc269-e"
 path = "abc269/e.rs"
-
-[[bin]]
-name = "abc269-f"
-path = "abc269/f.rs"
 
 ##############
 ##  abc270  ##
