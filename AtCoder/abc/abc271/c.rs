@@ -43,7 +43,6 @@ fn main() {
             deq.push_back(A[i]);
         }
     }
-    // println!("{:?} {}", deq, read);
     let mut ans = 0;
     while let Some(a) = deq.pop_front() {
         if a < ans + 1 {

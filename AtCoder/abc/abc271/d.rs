@@ -33,9 +33,6 @@ fn main() {
         ab:[(usize,usize);N]
     }
     let mut visited = vec![vec![vec![(inf_u, inf_u, inf_u); 2]; S + 1]; N + 1];
-    // for i in 0..=N {
-    //     visited[i][0] = true;
-    // }
     visited[0][0][0] = (10000, 0, 0);
     visited[0][0][1] = (10000, 0, 0);
     let cent = (inf_u, inf_u, inf_u);
@@ -61,29 +58,18 @@ fn main() {
     println!("{}", "Yes");
     let mut ans = vec![];
     let mut state = (N, S, 0);
-    if visited[N][S][0] != cent {
-        while visited[N][S][0] != (10000, 0, 0) && ans.len() <= N {
-            // println!("{:?}", ans);
-            if state.2 == 0 {
-                ans.push('H');
-            } else {
-                ans.push('T')
-            }
-            state = visited[state.0][state.1][state.2];
-        }
-    } else {
+    if visited[N][S][0] == cent {
         state = (N, S, 1);
-        while visited[N][S][0] != (10000, 0, 0) && ans.len() <= N {
-            if state.2 == 0 {
-                ans.push('H');
-            } else {
-                ans.push('T')
-            }
-            state = visited[state.0][state.1][state.2];
-        }
     }
-    ans.pop();
+    while visited[state.0][state.1][state.2] != (10000, 0, 0) {
+        if state.2 == 0 {
+            ans.push('H');
+        } else {
+            ans.push('T')
+        }
+        state = visited[state.0][state.1][state.2];
+    }
     ans.reverse();
-    let mut SS = ans.into_iter().collect::<String>();
+    let SS = ans.into_iter().collect::<String>();
     println!("{}", SS);
 }

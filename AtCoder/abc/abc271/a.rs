@@ -31,26 +31,9 @@ fn main() {
     input! {
         N:usize,
     }
-    let mut mp = HashMap::new();
-    mp.insert(0, '0');
-    mp.insert(1, '1');
-    mp.insert(2, '2');
-    mp.insert(3, '3');
-    mp.insert(4, '4');
-    mp.insert(5, '5');
-    mp.insert(6, '6');
-    mp.insert(7, '7');
-    mp.insert(8, '8');
-    mp.insert(9, '9');
-    mp.insert(10, 'A');
-    mp.insert(11, 'B');
-    mp.insert(12, 'C');
-    mp.insert(13, 'D');
-    mp.insert(14, 'E');
-    mp.insert(15, 'F');
-
-    let mut ans = vec!['a', 'a'];
-    ans[0] = *mp.get(&(N / 16)).unwrap();
-    ans[1] = *mp.get(&(N % 16)).unwrap();
-    println!("{}", ans.into_iter().collect::<String>());
+    let mut code = "0123456789ABCDEF"
+        .chars()
+        .into_iter()
+        .collect::<Vec<char>>();
+    println!("{}{}", code[N / 16], code[N % 16]);
 }
