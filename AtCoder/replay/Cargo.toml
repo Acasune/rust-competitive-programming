@@ -209,3 +209,15 @@ path = "abc249d_2.rs"
 [[bin]]
 name = "abc250-e-2"
 path = "abc250e_2.rs"
+
+[[bin]]
+name = "abc251-e-2"
+path = "abc251e_2.rs"
+
+[[bin]]
+name = "abc255-e-2"
+path = "abc255e_2.rs"
+
+[[bin]]
+name = "abc257-e-2"
+path = "abc257e_2.rs"
