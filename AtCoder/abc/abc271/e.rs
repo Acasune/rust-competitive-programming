@@ -29,6 +29,19 @@ const d4yx: [(i64, i64); 4] = [(1, 0), (0, 1), (-1, 0), (0, -1)];
 
 fn main() {
     input! {
-        N:usize,
+        N:usize,M:usize,K:usize,
+        ABC:[(Usize1,Usize1,usize);M],
+        E:[Usize1;K],
+    }
+    let mut dp = vec![inf_u; N];
+    dp[0] = 0;
+    for k in 0..K {
+        let (a, b, c) = ABC[E[k]];
+        dp[b] = dp[b].min(dp[a] + c);
+    }
+    if dp[N - 1] == inf_u {
+        println!("{}", -1);
+    } else {
+        println!("{}", dp[N - 1]);
     }
 }

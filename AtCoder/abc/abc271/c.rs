@@ -9,6 +9,7 @@ use proconio::*;
 use std::cmp::Reverse;
 use std::collections::{BinaryHeap, HashMap, HashSet, VecDeque};
 use std::{char, f32, f64, i32, i64, usize};
+use superslice::*;
 
 const inf_i: i64 = (i64::MAX / 10) * 9;
 const inf_u: usize = (usize::MAX / 10) * 9;
@@ -30,54 +31,23 @@ const d4yx: [(i64, i64); 4] = [(1, 0), (0, 1), (-1, 0), (0, -1)];
 fn main() {
     input! {
         N:usize,
-        mut A:[usize;N]
+        mut A:[Usize1;N]
     }
     A.sort();
-    let mut deq = VecDeque::new();
-    deq.push_back(A[0]);
-    let mut read = 0;
-    for i in 1..N {
-        if A[i - 1] == A[i] {
-            read += 1;
+    A.dedup();
+    let mut ok = 0;
+    let mut ng = inf_u;
+    while ng - ok > 1 {
+        let m = (ng + ok) / 2;
+        let save = A.lower_bound(&m);
+        let short = m - save;
+        let sell = N - save;
+        if short <= sell / 2 {
+            // ok
+            ok = m;
         } else {
-            deq.push_back(A[i]);
+            ng = m;
         }
     }
-    let mut ans = 0;
-    while let Some(a) = deq.pop_front() {
-        if a < ans + 1 {
-            continue;
-        } else if a == ans + 1 {
-            ans += 1;
-        } else {
-            while read > 1 && a > ans + 1 {
-                read -= 2;
-                ans += 1;
-            }
-            if a != ans + 1 {
-                while deq.len() > 0 && a > ans + 1 {
-                    deq.pop_back();
-                    if deq.len() > 0 && read != 1 {
-                        deq.pop_back();
-                        read += 1;
-                    }
-                    read += 1;
-                    if read > 1 {
-                        read -= 2;
-                        ans += 1;
-                    }
-                }
-            }
-            if a == ans + 1 {
-                ans += 1;
-            } else {
-                read += 1;
-            }
-        }
-    }
-    while read > 1 {
-        read -= 2;
-        ans += 1;
-    }
-    println!("{}", ans);
+    println!("{}", ok);
 }
